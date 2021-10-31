@@ -34,8 +34,7 @@ export class AuthController{
             const token = jwt.sign({userId:isUser.id},JWT_KEY,{expiresIn:3600})
             isUser.password= ""
             return res.json({
-                token:token,
-                user:isUser
+                token:token
             })
         } catch (err) {
             console.log(err)

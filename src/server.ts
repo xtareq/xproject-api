@@ -4,6 +4,7 @@ import authRoutes from './routes/authRoutes'
 import accountRoutes from './routes/accountRoutes'
 import 'reflect-metadata'
 import dotenv from 'dotenv'
+import cors from 'cors'
 
 dotenv.config()
 
@@ -12,6 +13,8 @@ const PORT = process.env.PORT || 3500
 
 async function igniteServer(PORT:IPort){
     const server:Express = express();
+    
+
 
     server.use(express.json())
 
@@ -24,11 +27,12 @@ async function igniteServer(PORT:IPort){
         await connection.sync({force:false});
         //await connection.models.PasswordReset.sync({force:true})
     } catch (error) {
+        console.log(error)
         process.exit(1);
     }
 
 
-
+    server.use(cors())
     server.use("/auth", authRoutes)
     server.use("/account", accountRoutes)
 
