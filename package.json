@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xtareq/ex-ts-start"
+    "url": "https://github.com/xtareq/xproject-api"
   },
   "keywords": [
     "express",
@@ -47,10 +47,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
-<<<<<<< HEAD
-=======
     "@types/cors": "^2.8.12",
->>>>>>> origin/master
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
     "@types/express-jwt": "^6.0.2",
@@ -60,10 +57,7 @@
     "nodemon": "^2.0.13",
     "npm-run-all": "^4.1.5",
     "shelljs": "^0.8.4",
-<<<<<<< HEAD
-=======
     "ts-node": "^10.4.0",
->>>>>>> origin/master
     "typescript": "^4.4.3"
   }
 }
